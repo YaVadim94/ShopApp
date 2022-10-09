@@ -1,8 +1,11 @@
+using ShopWebApp.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddAntDesign();    
+builder.Services.AddAntDesign();
+builder.Services.RegisterAppServices();
 
 var app = builder.Build();
 

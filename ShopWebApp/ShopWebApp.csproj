@@ -4,6 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -13,6 +14,26 @@
 
     <ItemGroup>
       <PackageReference Include="AntDesign" Version="0.12.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Components\ImageCard.razor" />
+      <AdditionalFiles Include="Components\NavMenu.razor" />
+      <AdditionalFiles Include="Pages\Error.cshtml" />
+      <AdditionalFiles Include="Pages\Index.razor" />
+      <AdditionalFiles Include="Pages\_Host.cshtml" />
+      <AdditionalFiles Include="Pages\_Layout.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Frontend\Pages\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Frontend\Pages\_Host.cshtml" />
+      <_ContentIncludedByDefault Remove="Frontend\Pages\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Frontend\Pages\Index.razor" />
     </ItemGroup>
 
 </Project>
