@@ -1,38 +1,37 @@
 ﻿using ShopWebApp.Data.Models;
 
-namespace ShopWebApp.Frontend.Services.ShoesService
+namespace ShopWebApp.Services.ShoesService;
+
+/// <summary>
+/// Сервис для работы с обувью
+/// </summary>
+public class ShoesService : IShoesService
 {
     /// <summary>
-    /// Сервис для работы с обувью
+    /// Получить список всех моделей
     /// </summary>
-    public class ShoesService : IShoesService
+    public async Task<IEnumerable<Shoes>> GetAll()
     {
-        /// <summary>
-        /// Получить список всех моделей
-        /// </summary>
-        public async Task<IEnumerable<Shoes>> GetAll()
-        {
-            await Task.CompletedTask;
+        await Task.CompletedTask;
             
-            List<Shoes> shoesList = new()
-            {
-                CreateShoes("Тапка 1"),
-                CreateShoes("Тапка 2"),
-                CreateShoes("Тапка 3"),
-                CreateShoes("Тапка 4"),
-                CreateShoes("Тапка 5"),
-            };
+        List<Shoes> shoesList = new()
+        {
+            CreateShoes("Тапка 1"),
+            CreateShoes("Тапка 2"),
+            CreateShoes("Тапка 3"),
+            CreateShoes("Тапка 4"),
+            CreateShoes("Тапка 5"),
+        };
 
-            return shoesList;
-        }
-
-        private static Shoes CreateShoes(string name) =>
-            new()
-            {
-                Name = name,
-                Color = 1,
-                Type = 1,
-                VendorCode = 1
-            };
+        return shoesList;
     }
+
+    private static Shoes CreateShoes(string name) =>
+        new()
+        {
+            Name = name,
+            Color = 1,
+            Type = 1,
+            VendorCode = 1
+        };
 }

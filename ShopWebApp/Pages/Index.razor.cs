@@ -1,9 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using AntDesign;
 using Microsoft.AspNetCore.Components;
 using ShopWebApp.Data.Models;
-using ShopWebApp.Frontend.Services.FileService;
-using ShopWebApp.Frontend.Services.ShoesService;
+using ShopWebApp.Services.FileService;
+using ShopWebApp.Services.ShoesService;
 
 namespace ShopWebApp.Pages;
 
@@ -13,7 +12,7 @@ namespace ShopWebApp.Pages;
 public partial class Index : ComponentBase
 {
     private const int RowElementCount = 4;
-    private int _showedCardCount;
+    // private int _showedCardCount;
 
     [Inject]
     [MemberNotNull]
@@ -49,7 +48,7 @@ public partial class Index : ComponentBase
     }
         
 
-    private async Task<bool> HandleRemove(UploadFileItem file)
+    private async Task<bool> HandleRemove()
     {
         return await Task.FromResult(true);
     }

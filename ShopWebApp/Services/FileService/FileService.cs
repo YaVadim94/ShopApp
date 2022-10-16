@@ -1,4 +1,4 @@
-﻿namespace ShopWebApp.Frontend.Services.FileService;
+﻿namespace ShopWebApp.Services.FileService;
 
 /// <summary>
 /// Сервис для работы с файлами

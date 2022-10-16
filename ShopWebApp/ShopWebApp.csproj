@@ -13,16 +13,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="AntDesign" Version="0.12.4" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Folder Include="Assets" />
+      <Folder Include="Components" />
     </ItemGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Components\ImageCard.razor" />
-      <AdditionalFiles Include="Components\NavMenu.razor" />
       <AdditionalFiles Include="Pages\Error.cshtml" />
       <AdditionalFiles Include="Pages\Index.razor" />
       <AdditionalFiles Include="Pages\_Host.cshtml" />
@@ -34,6 +29,10 @@
       <_ContentIncludedByDefault Remove="Frontend\Pages\_Host.cshtml" />
       <_ContentIncludedByDefault Remove="Frontend\Pages\_Layout.cshtml" />
       <_ContentIncludedByDefault Remove="Frontend\Pages\Index.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MatBlazor" Version="2.8.0" />
     </ItemGroup>
 
 </Project>

@@ -1,11 +1,12 @@
+using MatBlazor;
 using ShopWebApp.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddAntDesign();
 builder.Services.RegisterAppServices();
+builder.Services.AddMatBlazor();
 
 var app = builder.Build();
 

@@ -1,15 +1,14 @@
 ﻿using ShopWebApp.Data.Models;
 
-namespace ShopWebApp.Frontend.Services.ShoesService
+namespace ShopWebApp.Services.ShoesService;
+
+/// <summary>
+/// Сервис для работы с обувью
+/// </summary>
+public interface IShoesService
 {
     /// <summary>
-    /// Сервис для работы с обувью
+    /// Получить список всех моделей
     /// </summary>
-    public interface IShoesService
-    {
-        /// <summary>
-        /// Получить список всех моделей
-        /// </summary>
-        Task<IEnumerable<Shoes>> GetAll();
-    }
+    Task<IEnumerable<Shoes>> GetAll();
 }

@@ -1,20 +1,3 @@
 ﻿@page "/"
 
-<Row>
-    @foreach (var shoe in Shoes)
-    {
-        <GridCol Span="5" Offset="1">
-            <Card Style="width:300px;" Bordered Cover="ShowPicture()">
-                <CardMeta Title="@shoe.Name" Description="@shoe.GetDescription()" />
-            </Card>
-        </GridCol>
-
-        @if (++_showedCardCount % RowElementCount == 0 && _showedCardCount != RowElementCount)
-        {
-            <Divider Orientation="left"></Divider>
-        }
-    }
-</Row>
-
-<Button OnClick="() => AddRow()">Добавить ряд</Button>
-
+Hello from body index
