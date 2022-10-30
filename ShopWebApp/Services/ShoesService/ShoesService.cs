@@ -10,7 +10,7 @@ public class ShoesService : IShoesService
     /// <summary>
     /// Получить список всех моделей
     /// </summary>
-    public async Task<IEnumerable<Shoes>> GetAll()
+    public async Task<List<Shoes>> GetAll()
     {
         await Task.CompletedTask;
             
@@ -21,6 +21,8 @@ public class ShoesService : IShoesService
             CreateShoes("Тапка 3"),
             CreateShoes("Тапка 4"),
             CreateShoes("Тапка 5"),
+            CreateShoes("Тапка 5"),
+            CreateShoes("Тапка 6"),
         };
 
         return shoesList;
@@ -30,6 +32,7 @@ public class ShoesService : IShoesService
         new()
         {
             Name = name,
-            Color = "белый"
+            Color = "белый",
+            Price = new decimal(new Random().Next(1000, 9999))
         };
 }

@@ -10,5 +10,5 @@ public interface IShoesService
     /// <summary>
     /// Получить список всех моделей
     /// </summary>
-    Task<IEnumerable<Shoes>> GetAll();
+    Task<List<Shoes>> GetAll();
 }

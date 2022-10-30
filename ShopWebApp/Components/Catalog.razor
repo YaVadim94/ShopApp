@@ -1,0 +1,21 @@
+﻿<MudStack Class="mt-10" Row="true">
+    <MudDivider></MudDivider>
+    <SansSerifText Color="@Colors.Grey.Darken1" FontSize="32">YARISH FASION</SansSerifText>
+    <MudDivider></MudDivider>
+</MudStack>
+
+@foreach (var shoesBatch in ShoesList.Chunk(4))
+{
+    <MudGrid Class="mt-10">
+        @for (var i = 0; i < 4; i++)
+        {
+            var shoe = shoesBatch.ElementAtOrDefault(i); 
+            <MudItem xs="3" Class="d-flex justify-center">
+                @if (shoe != null)
+                {
+                    <ShoesCard Shoes="@shoe"></ShoesCard>
+                }
+            </MudItem>
+        }
+    </MudGrid>
+}

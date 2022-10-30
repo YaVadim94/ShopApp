@@ -31,4 +31,55 @@
         </div>
     </MudItem>
 </MudGrid>
+
 <MudDivider></MudDivider>
+
+<MudGrid>
+    <MudItem xs="3"></MudItem>
+    <MudItem xs="6" Class="d-flex justify-center">
+        <MudStack Row="true" Style="height: 52px">
+            <MudButton Variant="Variant.Text"
+                       Style="@($"font-family: OpenSans, sans-serif; font-size: 15px; color: {Colors.Grey.Darken1}")">
+                Топы
+            </MudButton>
+            <MudButton Variant="Variant.Text" 
+                       Style="@($"font-family: OpenSans, sans-serif; font-size: 15px; color: {Colors.Grey.Darken1}")">
+                Платья
+            </MudButton>
+            <MudButton Variant="Variant.Text"
+                       Style="@($"font-family: OpenSans, sans-serif; font-size: 15px; color: {Colors.Grey.Darken1}")">
+                Свитера
+            </MudButton>
+            <MudButton Variant="Variant.Text"
+                       Style="@($"font-family: OpenSans, sans-serif; font-size: 15px; color: {Colors.Grey.Darken1}")">
+                Джинсы
+            </MudButton>
+            <MudButton Variant="Variant.Text" 
+                       Style="@($"font-family: OpenSans, sans-serif; font-size: 15px; color: {Colors.Grey.Darken1}")">
+                Юбки
+            </MudButton>
+            <MudButton Variant="Variant.Text" 
+                       Style="@($"font-family: OpenSans, sans-serif; font-size: 15px; color: {Colors.Grey.Darken1}")">
+                Акссесуары
+            </MudButton>
+        </MudStack>
+    </MudItem>
+    <MudItem xs="3"></MudItem>
+</MudGrid>
+
+<MudDivider></MudDivider>
+
+<MudCarousel TData="object" ShowArrows="true" AutoCycleTime="TimeSpan.FromSeconds(5)" 
+             Style="height: 420px" Class="mt-10">
+    <MudCarouselItem>
+        <MudImage Src="Pictures/pic1.jpg" ObjectFit="ObjectFit.Fill" Style="height: 100%; width: 100%"></MudImage>
+    </MudCarouselItem>
+    <MudCarouselItem>
+        <MudImage Src="Pictures/pic2.jpg" ObjectFit="ObjectFit.Fill" Style="height: 100%; width: 100%"></MudImage>
+    </MudCarouselItem>
+</MudCarousel>
+
+<Catalog></Catalog>
+
+
+<div class="mt-10 mb-10">OOLOL</div>
