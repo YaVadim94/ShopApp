@@ -16,7 +16,7 @@
                 <MudList Clickable="false">
                     @foreach (var shoes in Cart.ShoesList)
                     {
-                        <MudItem Style="max-height: 75">
+                        <MudItem Style="max-height: 75px">
                             <MudStack Row="true" Class="ma-1">
                                 <MudImage Src="Pictures/pic1.jpg" ObjectFit="ObjectFit.Contain" Height="70"></MudImage>
                                 <MudStack Spacing="1">
@@ -36,6 +36,43 @@
                 </MudList>
                 <MudScrollToTop Selector="#product-list"></MudScrollToTop>
             </div>
+            <MudPaper Style="@($"background-color: {Colors.Grey.Lighten3}")">
+                <MudStack Class="ma-4" Spacing="0">
+                    <MudStack Row="true">
+                        <MudText Color="Color.Dark"
+                                 Style="font-family: OpenSans, sans-serif; font-size: 14px; font-weight: bold;">
+                            Сумма:
+                        </MudText>
+                        <MudText Color="Color.Dark"
+                                 Style="font-family: OpenSans, sans-serif; font-size: 14px">
+                            @(Cart.ShoesList.Sum(x => x.Price)) руб.
+                        </MudText>
+                    </MudStack>
+                    <MudStack Row="true">
+                        <MudText Color="Color.Dark" 
+                                 Style="font-family: OpenSans, sans-serif; font-size: 14px; font-weight: bold">
+                            Скидка:
+                        </MudText>
+                        <MudText Style="font-family: OpenSans, sans-serif; font-size: 14px">
+                            0 руб.
+                        </MudText>
+                    </MudStack>
+                    <MudStack Row="true">
+                        <MudText Color="Color.Dark"
+                                 Style="font-family: OpenSans, sans-serif; font-size: 14px; font-weight: bold">
+                            Итого:
+                        </MudText>
+                        <MudText Color="Color.Dark" 
+                                 Style="font-family: OpenSans, sans-serif; font-size: 14px">
+                            @(Cart.ShoesList.Sum(x => x.Price)) руб.
+                        </MudText>
+                    </MudStack>
+                    <MudStack Row="true" Spacing="1" Class="mt-2">
+                        <MudButton Variant="Variant.Filled" Size="Size.Small" Color="Color.Dark">Корзина</MudButton>
+                        <MudButton Variant="Variant.Filled" Size="Size.Small"Color="Color.Dark" >Оформить</MudButton>
+                    </MudStack>
+                </MudStack>
+            </MudPaper>
         }
 
     </MudStack>

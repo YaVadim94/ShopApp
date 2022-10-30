@@ -14,6 +14,7 @@ public partial class MiniCart : ComponentBase
 
     private string Product => (Cart.ShoesList.Count % 10) switch
     {
+        
         0 or 5 or 6 or 7 or 8 or 9 => "товаров",
         1 => "товар",
         2 or 3 or 4 => "товара",
