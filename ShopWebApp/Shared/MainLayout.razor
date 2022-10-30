@@ -1,37 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
-<MatAppBarContainer >
-    <MatAppBar Fixed="true">
-        <div class="mat-layout-grid header-container">
-            <div class="mat-layout-grid-inner header-container-inner">
-                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-4 city">
-                    <p class="city">Ваш город:</p>
-                    <a class="city" href="/">Москва</a>
-                </div>
-                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-4 nav">
-                    <a class="nav" href="/">О магазине</a>
-                    <a class="nav" href="/">Скидки</a>
-                    <a class="nav" href="/">Бренды</a>
-                    <a class="nav" href="/">Доставка и оплата</a>
-                    <a class="nav" href="/">Блог</a>
-                    <a class="nav" href="/">Контакты</a>
-                </div>
-                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2 login">
-                    <div class="long-top">
-                        <a class="login" href="/">Войти</a>
-                        <a class="login" href="/">Регистрация</a>
-                    </div>
-                    <span class="login-bottom">
-                        <a class="login" href="/">Администрирование</a>
-                    </span>
-                </div>
-                <div class="mat-layout-grid-cell mat-layout-grid-cell-span-2"></div>
-            </div>
-        </div>
-    </MatAppBar>
+<MudThemeProvider />
+<MudDialogProvider/>
+<MudSnackbarProvider/>
 
-    <MatAppBarContent>
+<MudLayout>
+    <Header></Header>
+    <MudMainContent>
         @Body
-    </MatAppBarContent>
-
-</MatAppBarContainer>
+    </MudMainContent>
+</MudLayout>

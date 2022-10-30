@@ -1,0 +1,34 @@
+﻿<MudGrid Style="height: 172px;">
+    <MudItem xs="4" Class="d-flex justify-center align-center">
+        <MudTextField
+            @bind-Value="Search"
+            Label="Поиск"
+            Variant="Variant.Outlined"
+            Adornment="Adornment.End"
+            AdornmentIcon="@Icons.Filled.Search"
+            AdornmentColor="Color.Dark"
+            Clearable="true"
+            Margin="Margin.Dense"
+            Style="width: 80%"/>
+    </MudItem>
+    <MudItem xs="4" Class="d-flex align-center">
+        <MudImage Src="Pictures/logo.png" Fluid="true"></MudImage>
+    </MudItem>
+    <MudItem xs="4" Class="flex-column">
+        <MudText Align="Align.End" Style="font-size: 16px; font-family: OpenSans, sans-serif" Color="Color.Dark">
+            +7 (902) 264-34-24
+        </MudText>
+        <div class="feedback">
+            <MudLink Color="Color.Dark" Class="mr-2 cursor-pointer" Style="font-size: 12px; font-family: OpenSans, sans-serif">
+                Отправить сообщение
+            </MudLink>
+            <MudLink Color="Color.Dark" Class="cursor-pointer" Style="font-size: 12px; font-family: OpenSans, sans-serif">
+                Обратный звонок
+            </MudLink>
+        </div>
+        <div class="cart-info mt-2">
+            <MiniCart Cart="Cart"></MiniCart>
+        </div>
+    </MudItem>
+</MudGrid>
+<MudDivider></MudDivider>

@@ -1,4 +1,4 @@
-using MatBlazor;
+using MudBlazor.Services;
 using ShopWebApp.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.RegisterAppServices();
-builder.Services.AddMatBlazor();
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 

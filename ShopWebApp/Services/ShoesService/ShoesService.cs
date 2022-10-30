@@ -30,8 +30,6 @@ public class ShoesService : IShoesService
         new()
         {
             Name = name,
-            Color = 1,
-            Type = 1,
-            VendorCode = 1
+            Color = "белый"
         };
 }

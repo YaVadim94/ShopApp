@@ -13,11 +13,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Assets" />
-      <Folder Include="Components" />
-    </ItemGroup>
-
-    <ItemGroup>
       <AdditionalFiles Include="Pages\Error.cshtml" />
       <AdditionalFiles Include="Pages\Index.razor" />
       <AdditionalFiles Include="Pages\_Host.cshtml" />
@@ -32,7 +27,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="MatBlazor" Version="2.8.0" />
+      <PackageReference Include="MudBlazor" Version="6.0.17" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\Pictures\logo.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="wwwroot\Pictures\pic1.jpg" />
     </ItemGroup>
 
 </Project>

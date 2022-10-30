@@ -1,0 +1,58 @@
+﻿div.city {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: OpenSans, sans-serif; 
+    font-size: 13px
+}
+
+a.city {
+    color: aliceblue;
+    margin-left: 2px;
+    text-decoration: underline dotted 1px grey;
+    text-underline-offset: 3px;
+    text-underline: grey;
+}
+
+p.city {
+    color: grey;
+}
+
+div.nav {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.nav {
+    text-decoration: none;
+    color: #d4d5da;
+}
+
+a.nav:hover {
+    color: grey;
+}
+
+div.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 13px;
+    margin-right: 50px;
+}
+
+div.login-top{
+
+}
+
+a.login {
+    text-decoration: none;
+    color: #d4d5da;
+}
+
+a.login:hover {
+    text-decoration: underline;
+}

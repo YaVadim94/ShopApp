@@ -11,45 +11,51 @@ namespace ShopWebApp.Pages;
 /// </summary>
 public partial class Index : ComponentBase
 {
-    private const int RowElementCount = 4;
-    // private int _showedCardCount;
-
     [Inject]
     [MemberNotNull]
     private IShoesService ShoesService { get; set; } = null!;
 
-    [Inject] private IFileService FileService { get; set; } = null!;
+    [Inject]
+    private IFileService FileService { get; set; } = null!;
+
+    /// <summary> Корзина </summary>
+    private Cart Cart { get; set; } = new();
 
     /// <summary>
-    /// Список обуви
+    /// Инициализация
     /// </summary>
-    [Parameter]
-    public List<Shoes> Shoes { get; set; } = new();
-    
-    /// <summary>
-    /// Инициалзация
-    /// </summary>
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        await AddRow();
-    }
-
-    private async Task AddRow()
-    {
-        var row = await ShoesService.GetAll();
-        Shoes.AddRange(row);
-    }
-
-    private RenderFragment ShowPicture()
-    {
-        const string fileUrl = @"D:\Programming\Repositories\123\ShopApp\ShopWebApp\Assets\pic1.jpg";
-
-        return builder => builder.AddMarkupContent(1, $"<img alt=\"example\" src={fileUrl}/>");
-    }
+        Cart.ShoesList.Add(new Shoes
+        {
+            Id = 1,
+            Color = "Белый",
+            Name = "Танк",
+            Price = new decimal(2990.90)
+        });
         
-
-    private async Task<bool> HandleRemove()
-    {
-        return await Task.FromResult(true);
+        Cart.ShoesList.Add(new Shoes
+        {
+            Id = 2,
+            Color = "Черный",
+            Name = "Сабо",
+            Price = new decimal(4990.90)
+        });
+        
+        Cart.ShoesList.Add(new Shoes
+        {
+            Id = 3,
+            Color = "Черный",
+            Name = "Крутые",
+            Price = new decimal(1990.90)
+        });
+        
+        Cart.ShoesList.Add(new Shoes
+        {
+            Id = 4,
+            Color = "Черный",
+            Name = "Новые",
+            Price = new decimal(8990.90)
+        });
     }
 }

@@ -1,33 +1,19 @@
 ﻿namespace ShopWebApp.Data.Models;
 
 /// <summary>
-/// Контракт для обуви.
+/// Контракт для обуви
 /// </summary>
 public class Shoes
 {
-    /// <summary>
-    /// Наименование модели.
-    /// </summary>
-    public string Name { get; set; } = String.Empty;
+    /// <summary> Идентификатор </summary>
+    public long? Id { get; set; }
+    
+    /// <summary> Наименование модели </summary>
+    public string Name { get; set; } = string.Empty;
 
-    /// <summary>
-    /// Артикул модели.
-    /// </summary>
-    public int VendorCode { get; set; }
+    /// <summary> Цвет модели </summary>
+    public string Color { get; set; } = string.Empty;
 
-    /// <summary>
-    /// Тип модели.
-    /// </summary>
-    public int Type { get; set; }
-
-    /// <summary>
-    /// Цвет модели.
-    /// </summary>
-    public int Color { get; set; }
-
-    /// <summary>
-    /// Описание
-    /// </summary>
-    public string GetDescription() =>
-        $"цвет: {Color}, тип: {Type}, артикул: {VendorCode}";
+    /// <summary> Цена </summary>
+    public decimal Price { get; set; }
 }

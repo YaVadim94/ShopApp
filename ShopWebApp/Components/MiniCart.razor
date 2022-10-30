@@ -1,0 +1,39 @@
+﻿<MudPaper Class="@($"z-20 {Elevation}")" Elevation="@(MiniCartShowed ? 25 : 0)" Outlined="@MiniCartShowed" Width="80%">
+    <MudStack>
+        <MudStack Row="true" Justify="Justify.FlexEnd" Class="ma-1">
+            <MudPaper Elevation="0" Style=@($"background-color:{Colors.Grey.Lighten5}; font-size: 14px;")
+                      Square="true" Outlined="true" Width="160px" Height="37px"
+                      Class="d-flex justify-center align-center cursor-pointer"
+                      @onclick="OnClickMiniCart">
+                <MudIcon Icon="@Icons.Rounded.ShoppingCart" Size="Size.Small"></MudIcon>
+                <span>@($"Корзина: {Cart.ShoesList.Count} {Product}")</span>
+            </MudPaper>
+        </MudStack>
+
+        @if (MiniCartShowed)
+        {
+            <MudList Clickable="false">
+                @foreach (var shoes in Cart.ShoesList)
+                {
+                    <MudItem Style="max-height: 75px">
+                        <MudStack Row="true" Class="ma-1">
+                            <MudImage Src="Pictures/pic1.jpg" ObjectFit="ObjectFit.Contain" Height="70"></MudImage>
+                            <MudStack Spacing="1">
+                                <MudLink Color="Color.Dark" Style="font-family: OpenSans, sans-serif; font-size: 14px">
+                                    @shoes.Name
+                                </MudLink>
+                                <MudText Style="font-family: OpenSans, sans-serif; font-size: 11px">
+                                    Количество: 1
+                                </MudText>
+                                <MudText Style="font-family: OpenSans, sans-serif; font-size: 11px">
+                                    Цена: @shoes.Price
+                                </MudText>
+                            </MudStack>
+                        </MudStack>
+                    </MudItem>
+                }
+            </MudList>
+        }
+
+    </MudStack>
+</MudPaper>
