@@ -12,27 +12,30 @@
 
         @if (MiniCartShowed)
         {
-            <MudList Clickable="false">
-                @foreach (var shoes in Cart.ShoesList)
-                {
-                    <MudItem Style="max-height: 75px">
-                        <MudStack Row="true" Class="ma-1">
-                            <MudImage Src="Pictures/pic1.jpg" ObjectFit="ObjectFit.Contain" Height="70"></MudImage>
-                            <MudStack Spacing="1">
-                                <MudLink Color="Color.Dark" Style="font-family: OpenSans, sans-serif; font-size: 14px">
-                                    @shoes.Name
-                                </MudLink>
-                                <MudText Style="font-family: OpenSans, sans-serif; font-size: 11px">
-                                    Количество: 1
-                                </MudText>
-                                <MudText Style="font-family: OpenSans, sans-serif; font-size: 11px">
-                                    Цена: @shoes.Price
-                                </MudText>
+            <div style="max-height: 240px; overflow: auto" id="product-list">
+                <MudList Clickable="false">
+                    @foreach (var shoes in Cart.ShoesList)
+                    {
+                        <MudItem Style="max-height: 75">
+                            <MudStack Row="true" Class="ma-1">
+                                <MudImage Src="Pictures/pic1.jpg" ObjectFit="ObjectFit.Contain" Height="70"></MudImage>
+                                <MudStack Spacing="1">
+                                    <MudLink Color="Color.Dark" Style="font-family: OpenSans, sans-serif; font-size: 14px">
+                                        @shoes.Name
+                                    </MudLink>
+                                    <MudText Style="font-family: OpenSans, sans-serif; font-size: 11px">
+                                        Количество: 1
+                                    </MudText>
+                                    <MudText Style="font-family: OpenSans, sans-serif; font-size: 11px">
+                                        Цена: @shoes.Price
+                                    </MudText>
+                                </MudStack>
                             </MudStack>
-                        </MudStack>
-                    </MudItem>
-                }
-            </MudList>
+                        </MudItem>
+                    }
+                </MudList>
+                <MudScrollToTop Selector="#product-list"></MudScrollToTop>
+            </div>
         }
 
     </MudStack>
