@@ -13,4 +13,5 @@ div.feedback {
 div.cart-info {
     display: flex;
     justify-content: flex-end;
+    overflow: hidden;
 }
