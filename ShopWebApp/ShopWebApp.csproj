@@ -9,32 +9,32 @@
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <WarningsAsErrors />
+        <WarningsAsErrors/>
     </PropertyGroup>
 
     <ItemGroup>
-      <AdditionalFiles Include="Pages\Error.cshtml" />
-      <AdditionalFiles Include="Pages\Index.razor" />
-      <AdditionalFiles Include="Pages\_Host.cshtml" />
-      <AdditionalFiles Include="Pages\_Layout.cshtml" />
+        <AdditionalFiles Include="Pages\Error.cshtml"/>
+        <AdditionalFiles Include="Pages\Index.razor"/>
+        <AdditionalFiles Include="Pages\_Host.cshtml"/>
+        <AdditionalFiles Include="Pages\_Layout.cshtml"/>
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Frontend\Pages\Error.cshtml" />
-      <_ContentIncludedByDefault Remove="Frontend\Pages\_Host.cshtml" />
-      <_ContentIncludedByDefault Remove="Frontend\Pages\_Layout.cshtml" />
-      <_ContentIncludedByDefault Remove="Frontend\Pages\Index.razor" />
+        <_ContentIncludedByDefault Remove="Frontend\Pages\Error.cshtml"/>
+        <_ContentIncludedByDefault Remove="Frontend\Pages\_Host.cshtml"/>
+        <_ContentIncludedByDefault Remove="Frontend\Pages\_Layout.cshtml"/>
+        <_ContentIncludedByDefault Remove="Frontend\Pages\Index.razor"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="MudBlazor" Version="6.0.17" />
+        <PackageReference Include="MudBlazor" Version="6.0.17"/>
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="wwwroot\Pictures\logo.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Include="wwwroot\Pictures\pic1.jpg" />
+        <None Include="wwwroot\Pictures\logo.png">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="wwwroot\Pictures\pic1.jpg"/>
     </ItemGroup>
 
 </Project>

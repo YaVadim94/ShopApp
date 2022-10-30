@@ -4,13 +4,13 @@
     align-items: center;
 }
 
-div.feedback{
+div.feedback {
     display: flex;
     justify-content: flex-end;
     font-size: 12px;
 }
 
-div.cart-info{
+div.cart-info {
     display: flex;
     justify-content: flex-end;
 }

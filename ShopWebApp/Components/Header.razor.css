@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: OpenSans, sans-serif; 
+    font-family: OpenSans, sans-serif;
     font-size: 13px
 }
 
@@ -44,7 +44,7 @@ div.login {
     margin-right: 50px;
 }
 
-div.login-top{
+div.login-top {
 
 }
 
